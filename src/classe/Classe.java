@@ -37,7 +37,11 @@ public class Classe {
             contagem.put(aluno.getDisciplina(), contagem.getOrDefault(aluno.getDisciplina(),0)+1);
         }
         return contagem;
+    }
 
+    // 6 Funcao para exibir alunos unicos
+    public Set<Aluno> exibirAlunosUnicos(){
+        return new HashSet<>(alunos);
     }
 
 }

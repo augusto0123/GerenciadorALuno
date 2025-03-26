@@ -34,5 +34,11 @@ public class Main {
         // Listando contagem de alunos por disciplina
         classe.contagemAlunosPorDiscipplina()
                 .forEach((disciplina, quantidade) -> System.out.println("Disciplina: " + disciplina + " | N° de alunos: " + quantidade));
+
+        // Listar alunos unicos
+        classe.exibirAlunosUnicos()
+                .forEach(aluno -> System.out.println(aluno.getNome()));
+
+        
     }
 }
