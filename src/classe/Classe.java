@@ -44,4 +44,11 @@ public class Classe {
         return new HashSet<>(alunos);
     }
 
+    // 7 Funcao para exibir alunos com nota menor que a fornecida
+    public List<Aluno> alunosComMenorNota(int nota){
+        return alunos.stream()
+                .filter(aluno -> aluno.getNota() < nota)
+                .collect(Collectors.toList());
+    }
+
 }

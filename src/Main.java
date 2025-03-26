@@ -39,6 +39,12 @@ public class Main {
         classe.exibirAlunosUnicos()
                 .forEach(aluno -> System.out.println(aluno.getNome()));
 
-        
+        // Exibir alunos Com nota menor que a fornecida
+        int notaFornecida = scanner.nextInt();
+
+        classe.alunosComMenorNota(notaFornecida)
+                .forEach(aluno -> System.out.println(aluno.getNome()));
+
+
     }
 }
