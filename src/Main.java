@@ -30,5 +30,9 @@ public class Main {
         // Listando alunos com base na nota em ordem crescente
         classe.listarAlunosPorNotaCrescente()
                 .forEach(aluno -> System.out.println("Nome: " + aluno.getNome() + " | Nota: " + aluno.getNota()));
+
+        // Listando contagem de alunos por disciplina
+        classe.contagemAlunosPorDiscipplina()
+                .forEach((disciplina, quantidade) -> System.out.println("Disciplina: " + disciplina + " | N° de alunos: " + quantidade));
     }
 }

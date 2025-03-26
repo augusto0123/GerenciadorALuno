@@ -2,9 +2,7 @@ package classe;
 
 import model.Aluno;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Classe {
@@ -29,6 +27,17 @@ public class Classe {
         return alunos.stream()
                 .sorted(Comparator.comparingInt(Aluno::getNota))
                 .collect(Collectors.toList());
+    }
+
+    // 5 Funcao para exibir a contagem de alunos por curso
+    public Map<String, Integer> contagemAlunosPorDiscipplina(){
+        Map<String, Integer> contagem = new HashMap<>();
+
+        for (Aluno aluno : alunos){
+            contagem.put(aluno.getDisciplina(), contagem.getOrDefault(aluno.getDisciplina(),0)+1);
+        }
+        return contagem;
+
     }
 
 }
